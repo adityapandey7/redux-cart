@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import style from "./ProductList.module.css";
-import { ToastContainer, toast } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "./Store/cart-slice"
@@ -18,18 +18,7 @@ function ProductList() {
   }, [dispatch]);
 
   
-  function notify() {
-    toast.success("Wow, succeesfully added to cart", {
-      position: "top-center",
-      autoClose: 500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
-  }
+
 
   return (
     <>
@@ -53,18 +42,7 @@ function ProductList() {
         ))}
       </div>
 
-      <ToastContainer
-        position="top-center"
-        autoClose={500}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+     
     </>
   );
 }

@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 const initialValue = { showCart: true, cartList: [], quantity: 0 };
 
@@ -16,10 +17,13 @@ export const cartSlice = createSlice({
 
       if (find >= 0) {
         state.cartList[find].quantity += 1;
+        toast.info(`Quantity of ${state.cartList[find].name}`);
+
       } else {
         const tempvar = { ...action.payload, quantity: 1 };
 
         state.cartList.push(tempvar);
+        toast.success(`Successfully added`);
       }
     },
     increment(state, action) {
@@ -66,3 +70,17 @@ export const cartSlice = createSlice({
 });
 
 export const cartActions = cartSlice.actions;
+
+
+// function notify() {
+//   toast.success("Wow, succeesfully added to cart", {
+//     // position: "top-center",
+//     // autoClose: 500,
+//     // hideProgressBar: false,
+//     // closeOnClick: true,
+//     // pauseOnHover: true,
+//     // draggable: true,
+//     // progress: undefined,
+//     // theme: "light",
+//   });
+// }
