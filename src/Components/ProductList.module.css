@@ -1,0 +1,36 @@
+.list{
+    display: flex;
+    gap: 25px;
+    position: relative;
+}
+.listItem{
+    width: 250px;
+    height: 350px;
+   position: relative;
+   top: 50px;
+   left: 50px;
+}
+img{
+    object-fit: fit;
+    height: 100%;
+    width: 100%;
+}
+.productDetail h5{
+    font-weight: 400;
+    font-size: 16px;
+}
+.productDetail h5 span{
+    margin-left: 15px;
+}
+button{
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+button:hover{
+    transform: scale(0.95);
+}

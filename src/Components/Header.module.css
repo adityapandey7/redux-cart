@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    color: white;
+    background-color: blue;
+    position: relative;
+}
+.cart{
+    font-size: 25px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+.cartHeader{
+    position: relative;
+}
+.totalQuantity{
+    position: absolute;
+    top: -5px;
+    right: 50%;
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    padding: 2.5px;
+    font-size: 10px;
+}
